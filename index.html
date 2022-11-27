@@ -1,0 +1,44 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <script src="jquery.js"></script>
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+  </div>
+      <div id="carbon-block"></div>
+    </div>
+    </div>
+    <script src="jquery-background-slideshow.js"></script>
+    <script>
+      $(document).ready(function() {
+          /*
+                  $(".layer").backgroundSlideshow({
+                      delay: 3000,
+                      transitionDuration: 3000,
+                      images: [
+                          "assets/images/image3.jpeg",
+                          "assets/images/image4.jpeg"
+                      ]
+                  })
+          */
+          $("body").backgroundSlideshow({
+              onBeforeTransition: function(index) {
+                  console.log("before transition", index)
+              },
+              onAfterTransition: function(index) {
+                  console.log("after transition", index)
+              },
+              transitionDuration: 3000,
+              fixed: true,
+              images: ["pics/1.jpg", "pics/2.jpg", "pics/3.jpg", "pics/4.jpg"]
+          })
+      })
+    </script>
+  </body>
+</html> 
